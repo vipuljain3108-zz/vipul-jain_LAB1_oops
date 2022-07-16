@@ -1,20 +1,25 @@
-class Shapes {
+/**
+ * IShape
+ */
+interface IShape {
+    Renderer renderer = new Renderer();
+
+    double calculateArea();
+    double calculatePerimeter();
+}
+
+class Shapes implements IShape{
     String color;
 
     Shapes(String color){
         this.color = color;
     }
 
-    double calculateArea(){
+    public double calculateArea(){
         return 0;
     }
 
-    double calculatePerimeter(){
+    public double calculatePerimeter(){
         return 0;
-    }
-
-    void displayColor(){
-        System.out.println("the collor is " + "" + this.color);
-        return;
     }
 }

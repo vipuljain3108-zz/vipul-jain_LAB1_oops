@@ -4,9 +4,8 @@ public class Squares extends Rectangles{
         super(color, side, side);
     }
 
-    void displayColor() {
-        System.out.println("the color of sqaure is " + "=>" + super.color);
-        return;
-    }
-    
+    @Override
+    public double calculateArea() {
+        return super.length * super.width;
+    }    
 }

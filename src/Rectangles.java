@@ -1,24 +1,22 @@
-public class Rectangles extends Shapes{
+public class Rectangles implements IShape{
     
     int length, width;
     final double PI = 3.14;
+    String color;
+
 
     Rectangles(String color, int length, int width) {
-        super(color);
+        this.color = color;
         this.length = length;
         this.width = width;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return this.length * this.width;
     }
 
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return 2 * (this.length + this.width);
     }
 
-    void displayColor() {
-        System.out.println("the color of rectangle is " + "=>" + super.color);
-        return;
-    }
 }
